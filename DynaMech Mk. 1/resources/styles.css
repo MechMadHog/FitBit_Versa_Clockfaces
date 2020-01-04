@@ -1,0 +1,31 @@
+.stat-text{
+  font-size: 25;
+  font-family: Seville-Regular;
+  fill: #ffffff;
+  /* Margin is at the left side of the screen. */
+  text-anchor: start;
+}
+
+.stat-number{
+  font-size: 25;
+  font-family: Seville-Regular;
+  fill: #ffffff;
+  /* Margin is at the right side of the screen. */
+  text-anchor: end;
+}
+
+.date{
+  font-size: 18;
+  font-family: Seville-Bold;
+  fill: #000000;
+  /* Margin is at the left side of the screen. */
+  text-anchor: start;
+}
+
+.date-digit{
+  font-size: 18;
+  font-family: Seville-Bold;
+  fill: #000000;
+  /* Margin is at the right side of the screen. */
+  text-anchor: end;
+}

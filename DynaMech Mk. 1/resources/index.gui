@@ -1,0 +1,94 @@
+<svg>
+        <!-- Analog Clock -->
+
+        <!-- Clock Background Image -->
+        <image id="background" href="versa/versa_bg.png"/>
+        <!-- Minute Hand -->
+        <g id="minutes" transform="translate(50%,50%)">
+          <rect x="-1" y="-110" width="3" height="125" fill="#1793c7"/>
+        </g>
+        <!-- Hour Hand -->
+        <g id="hours" transform="translate(50%,50%)">
+          <rect x="-3" y="-105" width="5" height="120" fill="#1793c7"/>
+        </g>
+        <!-- Second Hand -->
+        <g id="seconds" transform="translate(50%,50%)">
+          <rect x="0" y="-110" width="1" height="130" fill="#e82c38"/>
+        </g>
+  
+  
+  
+        <!-- Date -->
+  
+        <image href="versa/versa_date.png"/>
+        <text id="dayname" x="61" y="102" class="date">FRI</text>
+        <text id="date" x="60" y="102" class="date-digit">13</text>
+        
+  
+  
+        <!-- Interface Layers -->
+  
+        <!-- Layer 01 -->
+        <image id="layer1" href="versa/versa_layer1.png"/>
+        <!-- Layer 02 -->
+        <image id="layer2" href="versa/versa_layer2.png"/>
+
+
+  
+        <!-- Centered Digital Clock -->
+  
+        <!-- In Order to use Custom Fonts with FitBit it is necessary to provide character images.
+             As FitBit does not support; importing specific fonts.
+             The Positioning of the Hour Digits i.e. "01 - 24" -->
+        <image id="hours1" href="Font/0.png" x="48" y="120" width="45" height="60" fill="#ffffff"/>
+        <image id="hours2" href="Font/0.png" x="93" y="120" width="45" height="60" fill="#ffffff"/>
+        <!-- <!-- The Positioning of the Separator i.e. ":" --> -->
+        <image id="separator" href="Font/separator.png" x="143" y="133" width="17" height="40" fill="#ffffff"/>
+        <!-- The Positioning of the Minute Digits i.e. "01 - 59" -->
+        <image id="minutes1" href="Font/0.png" x="163" y="120" width="45" height="60" fill="#ffffff"/>
+        <image id="minutes2" href="Font/0.png" x="208" y="120" width="45" height="60" fill="#ffffff"/>
+
+  
+
+        <!-- Statistics Button -->
+  
+        <image x="5" y="5" width="35" height="35" href="versa/versa_btn.png"/>
+        <!-- "pointer-events" which is applied to an invisible shape on top of the buuton
+              MUST be "visible" in order for the button to be clickable.
+              When "fill-opacity" is sete to "0", it will make the shape invisible.
+              The Reason The Area is much larger than the button is to make it easier to touch -->
+        <rect id="btn" x="0" y="0" width="100" height="100" fill-opacity="0" pointer-events="visible"/>
+  
+        <!-- 2nd Screen -->
+              
+        <svg id="screen2" x="0" y="-300" width="300" height="300">
+              <rect width="300" height="300" fill="#0f0f0f"> 
+                    <!-- Pedometer Stats -->
+                    <text x="30" y="50" class="stat-text">Steps:</text>
+                    <image id="stepsIcon" href="Animations/Steps/step1.png" x="130" y="35" width="40" height="20" />
+                    <text id="stpValue" x="270" y="50" class="stat-number">-----</text>
+                    <!-- Heart Monitor Stats -->
+                    <text x="30" y="100" class="stat-text">BPM:</text>
+                    <image id="bpmIcon" href="Animations/BPM/bpm9.png" x="130" y="85" width="40" height="20" />
+                    <text id="bpmValue" x="270" y="100" class="stat-number">--</text>
+                    <!-- Calorie Counter Stats -->
+                    <text x="30" y="150" class="stat-text">Kcal:</text>
+                    <image id="burnIcon" href="Animations/Calories/burn1.png" x="130" y="135" width="40" height="20" />
+                    <text id="calValue" x="270" y="150" class="stat-number">----</text>
+                    <!-- Floor Counter Stats -->
+                    <text x="30" y="200" class="stat-text">Floors:</text>
+                    <image id="floorsIcon" href="Animations/Floors/floors6.png" x="130" y="185" width="40" height="20" />
+                    <text id="flValue" x="270" y="200" class="stat-number">--</text>
+                    <!-- Battery Power Stats -->
+                    <text x="30" y="250" class="stat-text">Battery:</text>
+                    <image id="btIcon" href="Animations/Battery/bt6.png" x="130" y="235" width="40" height="20" />
+                    <text id="btValue" x="270" y="250" class="stat-number">100%</text>
+              </rect>  
+                    <!-- Floating into Frame -->
+                    <animate attributeName="opacity" begin="enable" to="1" from="0" dur="0.3"/>
+                    <animate attributeName="y" begin="enable" from="-300" to="0" dur="0.3"/>
+                    <!-- Floating out of Frame -->
+                    <animate attributeName="opacity" begin="enable+5" to="0" from="1" dur="0.3"/>
+                    <animate attributeName="y" begin="enable+5" from="0" to="300" dur="0.3"/>                  
+       </svg>
+</svg>
